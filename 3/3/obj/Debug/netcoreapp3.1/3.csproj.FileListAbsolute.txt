@@ -1,0 +1,15 @@
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\3.exe
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\3.deps.json
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\3.runtimeconfig.json
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\3.runtimeconfig.dev.json
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\3.dll
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\3.pdb
+D:\itransition\3 задание\3\3\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.csprojAssemblyReference.cache
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.AssemblyInfoInputs.cache
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.AssemblyInfo.cs
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.csproj.CoreCompileInputs.cache
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.csproj.CopyComplete
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.dll
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.pdb
+D:\itransition\3 задание\3\3\obj\Debug\netcoreapp3.1\3.genruntimeconfig.cache
