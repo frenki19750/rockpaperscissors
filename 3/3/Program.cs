@@ -9,52 +9,59 @@ namespace _3
     {
         static void Main(string[] args)
         {
-            string key = "";
-            if (args.Length - 1 < 3)
+            while (true)
             {
-                Console.WriteLine("args must be >= 3");
-            }
-            else
-            {         
-
-                SecureRandom number = new SecureRandom();
-                int pcMove = 0;
-                pcMove = number.Next(1, args.Length);
-
-                string choisePK = args[pcMove];
-                byte[] hmac = hmacSHA256(choisePK, ref key);
-                Console.WriteLine("HMAC:" + BitConverter.ToString(hmac).Replace("-", "").ToLower());
-
-                Console.WriteLine("Available move:");
-                for (int i = 1; i < args.Length; i++)
+                string key = "";
+                if (args.Length - 1 < 3)
                 {
-                    string argument = args[i];
-                    Console.Write("Move index ");
-                    Console.Write(i); // Write index
-                    Console.Write(" is [");
-                    Console.Write(argument); // Write string
-                    Console.WriteLine("]");
+                    Console.WriteLine("args must be >= 3");
                 }
-                Console.Write("Enter your move: " );
-                int n = Convert.ToInt32(Console.ReadLine());
-                string ur = args[n];
-                Console.WriteLine("Your move: " + ur);
-                Console.WriteLine("Computer move: " + choisePK);
+                else
+                {
 
-                if(n == pcMove)
-                {
-                    Console.WriteLine("Draw");
+                    SecureRandom number = new SecureRandom();
+                    int pcMove = 0;
+                    pcMove = number.Next(1, args.Length);
+
+                    string choisePK = args[pcMove];
+                    byte[] hmac = hmacSHA256(choisePK, ref key);
+                    Console.WriteLine("HMAC:" + BitConverter.ToString(hmac).Replace("-", "").ToLower());
+
+                    Console.WriteLine("Available move:");
+                    Console.WriteLine("0 - exit");
+                    for (int i = 1; i < args.Length; i++)
+                    {
+                        string argument = args[i];
+                        Console.Write(i); // Write index
+                        Console.Write(" - ");
+                        Console.WriteLine(argument); // Write string
+
+                    }
+                    Console.Write("Enter your move: ");
+                    int n = Convert.ToInt32(Console.ReadLine());
+                    if (n == 0)
+                    {
+                        break;
+                    }
+                    string ur = args[n];
+                    Console.WriteLine("Your move: " + ur);
+                    Console.WriteLine("Computer move: " + choisePK);
+
+                    if (n == pcMove)
+                    {
+                        Console.WriteLine("Draw");
+                    }
+                    int length = args.Length - 1 / 2;
+                    if (pcMove < n)
+                    {
+                        Console.WriteLine("You lose");
+                    }
+                    else if (pcMove > n)
+                    {
+                        Console.WriteLine("You win");
+                    }
+                    Console.WriteLine("HMAC key:" + key);
                 }
-                int length = args.Length - 1 / 2;
-                if (pcMove < n)
-                {
-                    Console.WriteLine("You lose");
-                }
-                else if(pcMove > n)
-                {
-                    Console.WriteLine("You win");
-                }
-                Console.WriteLine("HMAC key:" + key);
 
             }
             static byte[] hmacSHA256(String data, ref string key)
