@@ -15,6 +15,7 @@ namespace _3
                 if (args.Length - 1 < 3)
                 {
                     Console.WriteLine("args must be >= 3");
+                    break;
                 }
                 else
                 {
